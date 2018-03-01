@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-/**
+/*
  * Class that student will interact with for any methods they need
  * 
  * -->James Heidelberger did initial set-up Feb 26, 2018
@@ -16,8 +16,7 @@ public class adminInteraction
   AccountController ac;
   public String username;
   public String password;
-  
-  /**
+  /*
    * Begins the login process, calls the Account controller
    */
   public void login()
@@ -30,7 +29,7 @@ public class adminInteraction
    ac = new AccountController(username, password);
    
   }
-  /**
+  /*
    * Calls the edit student function in the Admin Functionality Controller
    */
   public void editStudent()
@@ -53,7 +52,7 @@ public class adminInteraction
     afc.editUser(u, firstName, lastName, password, type, status);
   }
   
-  /**
+  /*
    *Gets any details to add a new university, then calls the addUniversity method in
    * the University Controller
    */
@@ -99,7 +98,7 @@ public class adminInteraction
                      academicScale, socialScale, qualityOfLifeScale);
   }
   
-  /**
+  /*
    * Gets any details to edit a university, then calls the edit university method in the
    * university controller
    */
@@ -146,7 +145,7 @@ public class adminInteraction
     dbc.editUniversity(uni);
   }
   
-  /**
+  /*
    * Gets all details to create a new Student, and then calls the addStudent function
    * in the admin functionality controller
    */
@@ -173,7 +172,7 @@ public class adminInteraction
   //  dbc.addUser(firstName, lastName, username, password, charType);
   }
   
-  /**
+  /*
    *calls the get users function in the admin functionality controller 
    */
   public void viewStudents()
@@ -192,7 +191,7 @@ public class adminInteraction
    uc.viewUniversityDetails(u);
   }
   
-  /**
+  /*
    * Calls the confirmation in the StudentFunctionalityController for confirmation
    * of any changes made
    */
@@ -218,7 +217,7 @@ public class adminInteraction
     return false;
   }
   
-  /**
+  /*
    * Begins the logout process, calls the Account controller
    */
   public void logout()
@@ -227,7 +226,7 @@ public class adminInteraction
     ac.logout();
   }
   
-  /**
+  /*
    * Begins the process to deactivate a user, calls the Account controller
    */
   public void deactivate()

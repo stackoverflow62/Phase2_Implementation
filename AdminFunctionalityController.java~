@@ -15,13 +15,6 @@ public class AdminFunctionalityController
    public Account stu;
   /**
    * Edits student account information
-   * 
-   * @param u the username provided by the user
-   * @param f the first name provided by the user
-   * @param l the last name provided by the user
-   * @param p the password provided by the user
-   * @param t the type provided by the user
-   * @param s the status provided by the user
    */
   public void editUser(String u, String f, String l, String p, char t, char s)
   {
@@ -53,11 +46,6 @@ public class AdminFunctionalityController
 //    scan.close();
   }
   
-  /**
-   * deactivates a user profile, disabling their access to CMC
-   * 
-   * @param s the current status of the profile
-   */
   public void deactivate(char s)
   {
     if (confirm())

@@ -15,20 +15,13 @@ public class AccountController{
   /**
    *Login for the user
    *
-   *@param u the username given by the user
-   *@param p the password given by the user
+   *
    **/
   public AccountController(String u, String p){
     login(u, p);
     ac.logIn();
   }
   
-  /**
-   *logs the user in
-   * 
-   * @param u the username given by the user
-   * @param p the password given by the user
-   */
    public void login(String u, String p){
     if(verifyAccount(u,p)){
       username = u;
@@ -37,12 +30,12 @@ public class AccountController{
       }
     }
   }  
-/**
- * Check the type of user that is logged in Student/Admin
- *
- *@param u the username given by the user
- *@returns returns a boolean value representing whether the user is an admin or student
- */
+  /**
+   * Check the type of user that is logged in Student/Admin
+   *
+   *@returns returns the type of user
+   *
+   **/
   public Boolean checkType(String u){
     for(int i = 0; i< users.length; i++)
     {
@@ -75,8 +68,7 @@ public class AccountController{
   /**
    * Check to see if the user account is active
    *
-   * @param u the username given by the user 
-   * @returns true if the account is active, otherwise false
+   *@returns true if the account is active, otherwise false
    **/
   public Boolean activeUser(String u){
     for(int i = 0; i< users.length; i++)
