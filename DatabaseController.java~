@@ -23,12 +23,7 @@ public class DatabaseController{
     dblib = new UniversityDBLibrary("stacko", "stacko", "csci230");
   }
   
-  /**
-   * Adds a university to the database
-   * 
-   * @param university A university object to add to the database
-   * @return returns a boolean value whether the university was successfully added
-   */
+  
   public boolean addUniversity(University university){
     int addFailed = 0;
     int failed = dblib.university_addUniversity(university.getUniversityName(), university.getUniversityState(), university.getLocationType(), university.getControl(), (int)university.getNumEnrolled(),
@@ -45,12 +40,6 @@ public class DatabaseController{
     return false;
   }
   
-  /**
-   * Edits an exisiting university
-   * 
-   * @param university A university to edit
-   * @return returns a boolean value whether or not the university was edited
-   */
   public boolean editUniversity(University university){
     String[][] array = dblib.university_getNamesWithEmphases();
     ArrayList<String> oldArray = new ArrayList<String>();
@@ -84,12 +73,6 @@ public class DatabaseController{
     
   }
   
-  /**
-   * Edits a user's information in the database
-   * 
-   * @param account the account of the user to be changed
-   * @return returns a boolean value of whether or not the edits were made
-   */
   public boolean editUser(Account account){
     int failed = dblib.user_editUser(account.getUsername(), account.getFirstName(), account.getLastName(), account.getPassword(),
                                      account.getType(), account.getStatus());
@@ -99,13 +82,6 @@ public class DatabaseController{
       return false;    
   }
   
-  
-  /**
-   * Saves a university to a user's saved school list
-   * 
-   * @param username the username of the user
-   * @param schoolName the name of the school to save
-   */
   public boolean saveUniversity(String username, String schoolName){
    int failed = dblib.user_saveSchool(username, schoolName);
    if(failed != -1)
@@ -113,22 +89,11 @@ public class DatabaseController{
    return false;
   }
  
-  /**
-   * Gets all of the users in the system
-   * 
-   * @return returns a 2-D Array of all users and their associated data
-   */
   public String[][] getUsers()
   {
     return dblib.user_getUsers();
   }
   
-  /**
-   * Deletes a university from the database
-   * 
-   * @param name the name of the university to delete
-   * @return boolean if the university was deleted 
-   */
   public boolean deleteUniversity(String name){
     University deleteUniversity = getUniversity(name);
     if(deleteUniversity == null){
@@ -146,12 +111,6 @@ public class DatabaseController{
       return false;
   }
   
-  /**
-   * Gets the details of a specific university
-   * 
-   * @param schoolName the name of the university to get
-   * @returns a University 
-   */
   public University getUniversity(String schoolName){
     ArrayList<String> emphases = new ArrayList<String>();
     String[][] arr = dblib.university_getNamesWithEmphases();
