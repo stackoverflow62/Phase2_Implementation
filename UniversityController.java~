@@ -3,6 +3,7 @@ import java.io.*;
 import java.lang.*;
 import java.util.*;
 import dblibrary.project.csci230.*;
+//import stackoverflow.*;
 public class UniversityController{
   
   
@@ -11,26 +12,7 @@ public class UniversityController{
   /**
    * recieve the University that will be added to the database
    * pre: university that is added should not already exist
-   * 
-   * 
-   * @param universityName the name of the university
-   * @param state where the university is located
-   * @param locationType whether the university is located in an rural, suburb, or city
-   * @param control whether the school is private or public
-   * @param numberOfStudents the number of students at a school
-   * @param female the percentage of female student on a campus
-   * @param satVerbal the sat verbal score of a university
-   * @param satMath the sat math score of a university
-   * @param expenses the cost of a university
-   * @param financialAid the financial aid that the school gives
-   * @param numberOfApplicants the number of students who apply to the university
-   * @param admitted the number of students admitted to the university
-   * @param enrolled the number of students enrolled at a university
-   * @param academcScale the academic scale of a university
-   * @param socialScale the social scale of a university
-   * @param qualityOfLifeScale the quality of life at a university
-   * 
-   *
+   * @param u university that will be added
    * @throws IllegalArgumentException is the preconditions are not met
    */
   
@@ -42,11 +24,6 @@ public class UniversityController{
                                    numAdmitted, numEnrolled, acaScale, socScale, qualityLife);
     
   }
-  /**
-   * This method allows a user to get their list of saved universities
-   * 
-   * @returns an ArrayList of thier saved Univeristies
-   */
   public ArrayList<University> getSavedUniversities() {
     
     ArrayList<University> schoolInfo = new ArrayList<University>();
@@ -69,14 +46,6 @@ public class UniversityController{
     return schoolInfo;
   }
   
-  /**
-   * This method allows for a user to add a new user with the following attributes. 
-   * 
-   * @param firstName the first name of the user
-   * @param lastName the last name of the user
-   * @param password the password associated with the account
-   * @param type the type of user an account is
-   */
   public void addUser(String firstName, String lastName, String username, String password,char type){
     dblib.user_addUser(username, firstName, lastName, password, type);
   }
@@ -120,13 +89,7 @@ public class UniversityController{
     u.getEmphases();
     
   }
-/**
- * This method allows for a user to get the information of a university they want to see.
- * 
- * @param schoolName the name of the university they want information of
- * 
- * @returns a university object containing all its information
- */
+  
  public University getUniversity(String schoolName){
       ArrayList<String> emphases = new ArrayList<String>();
       String[][] arr = dblib.university_getNamesWithEmphases();

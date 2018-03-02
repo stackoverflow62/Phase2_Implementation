@@ -19,48 +19,30 @@ public class University
 {
   private boolean savedStatus;//status, whether or not the school is save
   private String school;//name of school
-  private String state;//state where university is located
+  private String state;
   private String locationType;//Urban, Rural,etc
   private String control;//whether school is private or public
-  private int numberOfStudents;//number of students at a university
+  private int numberOfStudents;
   private double female;//percentage of female students in the university
-  private double satVerbal;//SAT verbal scores for a university
-  private double satMath;//SAT math scores for a university
-  private double expenses;//cost to attend a university 
-  private double financialAid;//financial aid a university offers
-  private int numOfApplicants;//number of students who apply to university
-  private double numAdmitted;//number of students admitted to a university
-  private double enrolled;//number of students enroll in a university
-  private int academicScale;//a university's academic standing
-  private int socialScale;//a university's social scale between 1-5
-  private int qualityOfLife;//quality of life on a university 1-5
+  private double satVerbal;
+  private double satMath;
+  private double expenses;
+  private double financialAid;
+  private int numOfApplicants;
+  private double numAdmitted;
+  private double enrolled;
+  private int academicScale;
+  private int socialScale;
+  private int qualityOfLife;
   private ArrayList<String> emphases;//School Majors
+  
   //Creates a list for the emphases a school has, which basically is a list of majors that is associated with a school. 
-  // ArrayList<String> emphases = new ArrayLIst<String>-->Mayber NOt SURE
+  // List emphases = new LinkedList-->Mayber NOt SURE
   
   /**
    * Constructor to create a new university with all the following information that a university should contain. 
-   * 
-   * 
-   * @param universityName the name of the university
-   * @param state where the university is located
-   * @param locationType whether the university is located in an rural, suburb, or city
-   * @param control whether the school is private or public
-   * @param numberOfStudents the number of students at a school
-   * @param female the percentage of female student on a campus
-   * @param satVerbal the sat verbal score of a university
-   * @param satMath the sat math score of a university
-   * @param expenses the cost of a university
-   * @param financialAid the financial aid that the school gives
-   * @param numberOfApplicants the number of students who apply to the university
-   * @param admitted the number of students admitted to the university
-   * @param enrolled the number of students enrolled at a university
-   * @param academcScale the academic scale of a university
-   * @param socialScale the social scale of a university
-   * @param qualityOfLifeScale the quality of life at a university
-   * 
    */
-    
+  
   public University(String school, String state,String locationType, String control, int numberOfStudents,double female,double satVerbal, 
                  double satMath,double expenses,double financialAid,int numOfApplicants, double numAdmitted, double enrolled, int academicScale,
                  int socailScale, int qualityOfLife)

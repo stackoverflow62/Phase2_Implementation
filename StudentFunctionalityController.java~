@@ -6,22 +6,16 @@ import dblibrary.project.csci230.*;
 /** 
  * The Student Functionality Controller class does actions for the student user  
  * 
- * First version-Ramon Angeles
- * JavaDoc-Vue Xiong
  * @author Ramon Angeles, Jonathan First, James H. , Jamie Veag, Vue Xiong
  * @version Feb 25, 2018
  */
 
 public class StudentFunctionalityController 
 {
-  Account stu;//an account
+  Account stu;
   private UniversityDBLibrary dblib;
   /** 
    * Edits the details of the students account
-   * 
-   * @param f students first name
-   * @param l students last name
-   * @param p students password
    */
   public void manageDetails(String f, String l, String p) 
   {
@@ -72,11 +66,7 @@ public class StudentFunctionalityController
     else 
       return false;
   }
-  /**
-   * Allows the user to view all the save universities that they have so far.
-   * 
-   * @returns an ArrayList of save Universities
-   */
+  
   public ArrayList<University> viewSavedUniversities() {
     
     ArrayList<University> schoolInfo = new ArrayList<University>();
@@ -98,13 +88,7 @@ public class StudentFunctionalityController
     }
     return schoolInfo;
   }
-  /**
-   * This allows user to get a university of their choice and all the emphasis of that university.
-   * 
-   * @param schoolName the university they want to get the emphais of 
-   * @returns a list of the university along with the emphasis
-   */
-  public University getUniversity(String schoolName){
+    public University getUniversity(String schoolName){
   ArrayList<String> emphases = new ArrayList<String>();
   String[][] arr = dblib.university_getNamesWithEmphases();
   String[][] school = dblib.university_getUniversities();
@@ -129,14 +113,7 @@ public class StudentFunctionalityController
   return university;
   }
   
-/**
- * This allows for a user to remove a university from their save list of university.
- * 
- * @param user the username of the student
- * @param school the university they want to remove
- * 
- * @returns true if a university was removed, otherwise fasle
- */
+
   public boolean removeUniversity(String user, String school){
     University removeUniversity = getUniversity(school);
     if(removeUniversity == null){

@@ -10,15 +10,14 @@ import java.io.*;
  * 
  * From 2/25/18-2/26/18-->worked on by Vue Xiong
  * -->wrote the variables, the constructor and setter method
- * JavaDoc - Vue Xiong
  * @author Ramon Angeles, Jonathan First, James H. , Jaime Vega, Vue Xiong
  * @version Feb 26, 2018
  */
 
 public class Student
 {
-  private String userName;//Username of the student account
-  private String password;//password associated with user account
+  private String userName;
+  private String password;
   private char accountStatus;//whether or not the student's account is still active or if it is deactivated.
   private University savedSchools;//the list of save schools for a student
   
@@ -49,8 +48,6 @@ public class Student
   
   /**
    * Allows the user to get a username
-   * 
-   * @returns the userName of an account
    */
   public String getUserName()
   {

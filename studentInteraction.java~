@@ -38,9 +38,9 @@ public class studentInteraction
     System.out.println("Enter the desired percentage of female students");
     double female = Double.parseDouble(sc.nextLine());
     System.out.println("Enter the SAT Verbal Score");
-    double satVerbal = Double.parseDouble(sc.nextLine());
+    double SATVerbal = Double.parseDouble(sc.nextLine());
     System.out.println("Enter the SAT Math Score");
-    double satMath = Double.parseDouble(sc.nextLine());
+    double SATMath = Double.parseDouble(sc.nextLine());
     System.out.println("Enter the expenses");
     double expenses = Double.parseDouble(sc.nextLine());
     System.out.println("Enter the percentage of students to receive financial aid");
@@ -59,8 +59,8 @@ public class studentInteraction
     int qualityOfLifeScale = Integer.parseInt(sc.nextLine());
     
     SearchController searchController = new SearchController();;
-    searchController.search(universityName, state, location, control, numberOfStudents, female, satVerbal,
-                            satMath, expenses, financialAid, numberOfApplicants, admitted, enrolled,
+    searchController.search(universityName, state, location, control, numberOfStudents, female, SATVerbal,
+                            SATMath, expenses, financialAid, numberOfApplicants, admitted, enrolled,
                             academicScale, socialScale, qualityOfLifeScale);
   }
   
@@ -128,8 +128,6 @@ public class studentInteraction
   /*
    * Calls the confirmation in the StudentFunctionalityController for confirmation
    * of any changes made
-   * 
-   * @returns true if user confirms changes, false otherwise
    */
   public boolean confirmation()
   {
